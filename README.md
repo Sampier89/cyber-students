@@ -184,5 +184,3 @@ As you can see, all of the information is stored in the clear; there
 is no encryption or password hashing. If a hacker was to compromise
 the database, they could easily run a similar program to retrieve all
 of the users personal information and passwords.
-
-#python file containing core security mechanisms and functionality (AES + Hashing) #references (https://www.youtube.com/watch?v=QztEdQZSR1c) #ensure that last block is 128bits in length from cryptography.hazmat.primitives import padding #Cipher objects that can combine AES with modes of operation such as CBC, CTR from cryptography.hazmat.primitives.cipher import Cipher, algorithms, modes #KDF designed for storing passwords (RFC7914) from cryptography.hazmat.primitives.kdf.scrpyt import Scrypt #support cryptographic backends from cryptography.hazmat.backends import default_backend #provide hashing functionality to message digests from cryptography.hazmats.primitives import hashes import os  import base64  def encryption_AES(cleartext, key):
